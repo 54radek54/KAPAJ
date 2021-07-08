@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Pet PDF</title>
+  <style>
+    body {
+      color: black;
+      font-family: 'Varela Round', sans-serif;
+      font-size: 13px;
+      background-color: powderblue;
+    }
+    .h2 {
+      margin: 5px 0 0;
+      font-size: large;
+    }
+    .container{
+      background-color: darkgray;
+    }
+    .table{
+      font-size: medium;
+    }
+  </style>
+</head>
+<body>
+<div class="container" align="center">
+          <div class="h2"><h2>Pet <b>View</b></h2></div>
+      <table class="table" th:align="center">
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>Imie</th>
+          <th>Rasa</th>
+          <th>Wiek</th>
+          <th>Opis</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:action="@{/pdf/{petId}}" th:object="${sheltersPet}">
+          <td th:text="${sheltersPet.id}">Id</td>
+          <td th:text="${sheltersPet.name}">Imie</td>
+          <td th:text="${sheltersPet.breed}">Rasa</td>
+          <td th:text="${sheltersPet.age}">Wiek</td>
+          <td th:text="${sheltersPet.description}">Opis</td>
+        </tr>
+        </tbody>
+      </table>
+</div>
+</body>
+</html>

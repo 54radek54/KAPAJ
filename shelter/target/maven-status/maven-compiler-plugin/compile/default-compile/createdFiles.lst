@@ -1,0 +1,4 @@
+com\shelter\shelter\ShelterApplication.class
+com\shelter\shelter\model\Pet.class
+com\shelter\shelter\repository\PetRepository.class
+com\shelter\shelter\controller\PetController.class

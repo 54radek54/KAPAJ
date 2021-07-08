@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>User Verification</title>
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<style>
+		body {
+			color: black;
+			background: #63738a;
+			font-family: 'Roboto', sans-serif;
+		}
+		.alert-message
+		{
+			margin: 20px 0;
+			padding: 20px;
+			border-left: 3px solid #eee;
+		}
+		.alert-message h4
+		{
+			margin-top: 0;
+			margin-bottom: 5px;
+		}
+		.alert-message p:last-child
+		{
+			margin-bottom: 0;
+		}
+		.alert-message code
+		{
+			background-color: #fff;
+			border-radius: 3px;
+		}
+		.alert-message-danger
+		{
+			background-color: #fdf7f7;
+			border-color: #d9534f;
+		}
+		.alert-message-danger h4
+		{
+			color: #d9534f;
+		}
+		.alert-message-warning
+		{
+			background-color: #fcf8f2;
+			border-color: #f0ad4e;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+		<div class="col-sm-6 col-md-6">
+			<div class="alert-message alert-message-danger">
+				<h4>Verification fail</h4>
+				<p>
+					Sorry, we could not verify account. It maybe already verified, or verification code is incorrect.</p>
+			</div>
+		</div>
+</div>
+</body>
+</html>

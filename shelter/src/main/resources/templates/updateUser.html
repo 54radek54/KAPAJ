@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            color: #fff;
+            background: darkgrey;
+            font-family: 'Roboto', sans-serif;
+        }
+        .form-control{
+            align-content: center;
+            height: 40px;
+            box-shadow: none;
+            color: #969fa4;
+        }
+        .form-control:focus{
+            border-color: #5cb85c;
+        }
+        .form-control, .btn{
+            border-radius: 3px;
+        }
+        .user{
+            width: 500px;
+            margin: 0 auto;
+            padding: 100px 0;
+        }
+        .user form{
+            color: #999;
+            border-radius: 3px;
+            margin-bottom: 15px;
+            background: #f2f3f7;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+        .user .form-group{
+            margin-bottom: 20px;
+
+        }
+        .user .btn{
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 140px;
+            outline: none !important;
+        }
+        .user .row div:first-child{
+            padding-right: 10px;
+        }
+        .user .row div:last-child{
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="user">
+<form th:action="@{/update}" th:object="${user}" method="post">
+    <h1 align="center"> User panel</h1>
+    <h4 align="center">Here u can change your profile</h4>
+    <div class="form-group" >
+        <div class="row">
+            <div class="col-xs-6"><input type="text" class="form-control" th:field="*{firstName}" placeholder="First Name" ></div>
+            <div class="col-xs-6"><input type="text" class="form-control" th:field="*{lastName}" placeholder="Last Name" ></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-success btn-lg btn-block">Update user</button>
+    </div>
+</form>
+</div>
+</body>
+</html>

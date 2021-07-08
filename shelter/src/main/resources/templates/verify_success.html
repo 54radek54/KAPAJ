@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>User Verification</title>
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<style>
+		body {
+			color: black;
+			background: #63738a;
+			font-family: 'Roboto', sans-serif;
+		}
+		.alert-message
+		{
+			margin: 20px 0;
+			padding: 20px;
+			border-left: 10px solid #eee;
+		}
+		.alert-message h4
+		{
+			margin-top: 0;
+			margin-bottom: 5px;
+		}
+		.alert-message p:last-child
+		{
+			margin-bottom: 0;
+		}
+		.alert-message code
+		{
+			background-color: #fff;
+			border-radius: 3px;
+		}
+		.alert-message-success
+		{
+			background-color: #F4FDF0;
+			border-color: #3C763D;
+		}
+		.alert-message-success h4
+		{
+			color: green;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6 col-md-6">
+			<div class="alert-message alert-message-success">
+				<h4>Congratulations, your account has been verified.</h4>
+				<p>Now you can adopt one of our pupils
+					<a th:href="@{/login}">Click here to Login</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
